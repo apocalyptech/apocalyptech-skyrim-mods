@@ -14,6 +14,8 @@ Some examples:
  - "An Explorer's Guide to Skyrim" becomes "Explorer's Guide to Skyrim, An"
  - "Journal - Arondil's, Part 1" becomes "Journal - Arondil's (Part 1)"
 
+This mod's been uploaded to Nexus at https://www.nexusmods.com/skyrimspecialedition/mods/171656
+
 The book title normalization is based on the previous book title
 normalizations done by the
 [Unofficial Skyrim Special Edition Patch (USSEP)](https://www.nexusmods.com/skyrimspecialedition/mods/266),
@@ -92,5 +94,5 @@ Changelog
 =========
 
 **v1.0.0** - *February 2, 2026*
- - Initial version
+ - Initial version (uploaded to Nexus on Feb 4)
 
