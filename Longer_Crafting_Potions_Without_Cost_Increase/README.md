@@ -48,10 +48,10 @@ Installation
 As I mention above, I currently don't have a pre-generated `.esp` in here,
 though I may generate some later.  The main problem is that I hate having to
 deal with "patch" files in that ecosystem, and I'd feel compelled to generate
-a few different values.  (And then the "proper" way to package that up would
+a few different variants.  (And then the "proper" way to package that up would
 almost certainly be with [FOMOD](https://www.nexusmods.com/skyrimspecialedition/mods/141001)
 definitions and such, and I'd sort of rather not bother trying to figure that
-out properly.  I *could* always just package up some different versions
+out properly.)  I *could* always just package up some different versions
 separately, of course...
 
 Mod Generation
@@ -91,8 +91,7 @@ care of that too, though (untested but I think it should work):
 
 Updates both crafted and "found" potions.
 
-### [Increased enchanting and smithing potion duration](https://www.nexusmods.com/skyrimspecialedition/mods/1915) +
-[Increased Enchanting and Smithing Potion Duration - Creation Club Patch](https://www.nexusmods.com/skyrimspecialedition/mods/27107)
+### [Increased enchanting and smithing potion duration](https://www.nexusmods.com/skyrimspecialedition/mods/1915) + [Increased Enchanting and Smithing Potion Duration - Creation Club Patch](https://www.nexusmods.com/skyrimspecialedition/mods/27107)
 
 Only affects Smithing + Enchanting (which are really the only two I actually
 care about anyway), and attempts to constrain potion prices as well, though
