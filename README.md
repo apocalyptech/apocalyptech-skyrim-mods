@@ -23,6 +23,11 @@ of things that I wanted, though, and so I've stuck my toe in slightly.
   mod.  It looks like USSEP is likely to fix those bounds in its
   next version, so this little thing probably has a pretty short
   shelf life.
+- [Longer Crafting Potions Without Cost Increase](Longer_Crafting_Potions_Without_Cost_Increase/).
+  Increases the duration of Barter/Enchanting/Smithing potions by 20x
+  (bringing most to 10 minutes) without altering their cost at all.
+  Currently just the generation script!  I'm not yet providing any
+  already-generated `.esp` files.
 
 That's it!
 
