@@ -116,14 +116,79 @@ import argparse
 #
 #  - The quotes are being taken out of '"Madmen" of the Reach', so that it
 #    alphabetizes into the Ms properly.
+#  - This utility now also introduces some series grouping for series which
+#    don't ordinarily have them.  This was inspired by the "Convergence
+#    Book Improvements" mod at https://www.nexusmods.com/skyrimspecialedition/mods/110308
+#    Specifically:
+#    - Adventures of Eslaf Erol
+#    - Ancient Falmer Tomes
+#    - Ancient Tales of the Dwemer
+#    - Mogen's Tales
+#  - The utility can optionally use "Life of Eslaf Erol" instead of
+#    "Adventures of Eslaf Erol," to match the covers added by
+#    Book Covers Skyrim.
 
 
-def process_skypatcher(source_file, dest_file, version=None):
+def process_skypatcher(source_file, dest_file, series=True, life=False, version=None):
     """
     Processing script!  Read from `source_file` and write to `dest_file`.
+
+    If `series` is true, four series of books which don't ordinarily
+    share a common prefix will be renamed to include the series name,
+    so they will be grouped together naturally by the game.
+
+    If `life` is true, the hardcoded "Adventures of Eslaf Erol" series
+    title will be "Life of Eslaf Erol" instead, which matches the images
+    used by Book Covers Skyrim.  "Adventures" is the name used on both
+    the UESP and Fandom wikis, though.
+
     If a `version` string is passed in, a header will be written out to
     the destination file which includes the specified version number.
     """
+
+    # Series Hardcodes, in an easy-to-edit format
+    series_hardcodes = {
+            'Ancient Tales of the Dwemer': {
+                1: 'The Ransom of Zarek',
+                2: 'The Seed',
+                3: 'The Importance of Where',
+                5: 'Song of the Alchemists',
+                6: 'Chimarvamidium',
+                10: 'The Dowry',
+                11: 'Azura and the Box',
+                },
+            'Adventures of Eslaf Erol': {
+                1: 'Beggar',
+                2: 'Thief',
+                3: 'Warrior',
+                4: 'King',
+                },
+            "Mogen's Tales": {
+                1: "The Woodcutter's Wife",
+                2: 'The Cabin in the Woods',
+                },
+            'Ancient Falmer Tomes': {
+                1: 'The Betrayed',
+                2: 'The Journal of Mirtil Angoth',
+                3: 'The Diary of Faire Agarwen',
+                4: 'Touching the Sky',
+                },
+            }
+    if life:
+        series_hardcodes['Life of Eslaf Erol'] = series_hardcodes['Adventures of Eslaf Erol']
+        del series_hardcodes['Adventures of Eslaf Erol']
+
+    # Process the hardcodes into a form that's nicer for the app
+    series_hardcodes_processed = {}
+    for series_name, entries in series_hardcodes.items():
+        volume_digits = len(str(max(entries.keys())))
+        format_str = f'{{series_name}}, Vol. {{vol_num:0{volume_digits}d}}: {{title}}'
+        for vol_num, title in entries.items():
+            series_hardcodes_processed[title.casefold()] = format_str.format(
+                    series_name=series_name,
+                    vol_num=vol_num,
+                    title=title,
+                    )
 
     # Regex to pull the title apart
     name_re = re.compile(r"""
@@ -165,6 +230,8 @@ def process_skypatcher(source_file, dest_file, version=None):
             # Write out a header if we've been told to
             if version:
                 header = f'Book Sorting SSE (SkyPatcher) v{version}'
+                if life:
+                    header += ' (using "Life Of Eslaf Erol" series title)'
                 print(f'; {header}', file=odf)
                 print('; {}'.format('='*len(header)), file=odf)
                 print(';', file=odf)
@@ -190,36 +257,44 @@ def process_skypatcher(source_file, dest_file, version=None):
                     volume = match.group('volume')
                     new_title = title
 
-                    # Move the prefix, if we have one (and apply a couple of hardcoded
-                    # actions)
-                    found_prefix = False
-                    for prefix in prefixes:
-                        if title.casefold().startswith(prefix):
-                            found_prefix = True
-                            
-                            # Hardcoded exception: this one just looks too weird with
-                            # the article at the end
-                            if title == 'A Kiss, Sweet Mother':
+                    # Check to see if we've got a hardcoded series translation
+                    if series and title.casefold() in series_hardcodes_processed:
+
+                        # We have a hardcoded series; use that!
+                        new_title = series_hardcodes_processed[title.casefold()]
+
+                    else:
+
+                        # Move the prefix, if we have one (and apply a couple of hardcoded
+                        # actions)
+                        found_prefix = False
+                        for prefix in prefixes:
+                            if title.casefold().startswith(prefix):
+                                found_prefix = True
+
+                                # Hardcoded exception: this one just looks too weird with
+                                # the article at the end
+                                if title == 'A Kiss, Sweet Mother':
+                                    break
+
+                                # Swap the article to the back
+                                new_title = title[len(prefix):] + ', ' + title[:len(prefix)-1]
+
+                                # Another hardcoded exception!
+                                if new_title.startswith('"Madmen"'):
+                                    new_title = 'Madmen' + new_title[8:]
+
                                 break
 
-                            # Swap the article to the back
-                            new_title = title[len(prefix):] + ', ' + title[:len(prefix)-1]
-
-                            # Another hardcoded exception!
-                            if new_title.startswith('"Madmen"'):
-                                new_title = 'Madmen' + new_title[8:]
-
-                            break
-
-                    # Add in the volume, if we have one
-                    if volume:
-                        match indicator[0].lower():
-                            case 'b':
-                                new_title += ' (Book ' + volume + ')'
-                            case 'p' | '#':
-                                new_title += ' (Part ' + volume + ')'
-                            case _:
-                                new_title += ' (Vol. ' + volume + ')'
+                        # Add in the volume, if we have one
+                        if volume:
+                            match indicator[0].lower():
+                                case 'b':
+                                    new_title += ' (Book ' + volume + ')'
+                                case 'p' | '#':
+                                    new_title += ' (Part ' + volume + ')'
+                                case _:
+                                    new_title += ' (Vol. ' + volume + ')'
 
                     # Write out the new title, if we have changes
                     if title != new_title:
@@ -256,6 +331,19 @@ if __name__ == '__main__':
             )
 
     parser.add_argument(
+            '-n', '--no-series',
+            dest='series',
+            action='store_false',
+            help='Do not process titles using hardcoded series categorization',
+            )
+
+    parser.add_argument(
+            '-l', '--life',
+            action='store_true',
+            help='Use "Life of Eslaf Erol" instead of "Adventures of Eslaf Erol", for Book Covers Skyrim compatibility',
+            )
+
+    parser.add_argument(
             '-f', '--force',
             action='store_true',
             help='Force overwrite, if the destination file already exists',
@@ -275,5 +363,5 @@ if __name__ == '__main__':
             print('Exiting!')
             sys.exit(1)
 
-    process_skypatcher(args.source, args.dest, version=args.version)
+    process_skypatcher(args.source, args.dest, series=args.series, life=args.life, version=args.version)
 

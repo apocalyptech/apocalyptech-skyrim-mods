@@ -48,8 +48,8 @@ a commandline script, so it needs to be run from a terminal or cmd.exe
 or Powershell or whatever, not just double-clicked from an Explorer
 window.  Running it with the `--help` argument will show the options:
 
-    usage: process_book_sorting_sse_skypatcher.py [-h] [-s SOURCE] [-d DEST] [-f]
-                                                  [-v VERSION]
+    usage: process_book_sorting_sse_skypatcher.py [-h] [-s SOURCE] [-d DEST] [-n]
+                                                  [-l] [-f] [-v VERSION]
 
     Normalize book titles in SkyPatcher statements
 
@@ -57,10 +57,15 @@ window.  Running it with the `--help` argument will show the options:
       -h, --help            show this help message and exit
       -s, --source SOURCE   Source file to process (default:
                             Book_Sorting_SSE_SkyPatcher.source)
-      -d, --dest DEST       Destination file to write to (default: ../SKSE/Plugins/Sk
-                            yPatcher/book/Book_Sorting_SSE_SkyPatcher.ini)
-      -f, --force           Force overwrite, if the destination file already exists
+      -d, --dest DEST       Destination file to write to (default: ../SKSE/Plugins
+                            /SkyPatcher/book/Book_Sorting_SSE_SkyPatcher.ini)
+      -n, --no-series       Do not process titles using hardcoded series
+                            categorization (default: True)
+      -l, --life            Use "Life of Eslaf Erol" instead of "Adventures of
+                            Eslaf Erol", for Book Covers Skyrim compatibility
                             (default: False)
+      -f, --force           Force overwrite, if the destination file already
+                            exists (default: False)
       -v, --version VERSION
                             Adds a version header to the top of the generated file
                             (default: None)
@@ -68,7 +73,7 @@ window.  Running it with the `--help` argument will show the options:
 Mostly it can be run without args to do its work, but for releasing the mod
 I'll provide a version like so:
 
-    $ ./process_book_sorting_sse_skypatcher.py -v 1.0.0
+    $ ./process_book_sorting_sse_skypatcher.py -v 1.1.0
 
 With the default arguments, that'll read from `Book_Sorting_SSE_SkyPatcher.source`
 in the current directory, and write it out into

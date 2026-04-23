@@ -34,6 +34,32 @@ Some exceptions to the normalization process:
   beginning.
 - Treasure Map roman numeral have been left as-is
 
+As of v1.1.0, this mod also introduces some series labelling for series
+which didn't already have them, inspired by [Convergence Book
+Improvements](https://www.nexusmods.com/skyrimspecialedition/mods/110308).
+Specifically, this will set the following names:
+
+- Adventures of Eslaf Erol, Vol. 1: Beggar
+- Adventures of Eslaf Erol, Vol. 2: Thief
+- Adventures of Eslaf Erol, Vol. 3: Warrior
+- Adventures of Eslaf Erol, Vol. 4: King
+- Ancient Falmer Tomes, Vol. 1: The Betrayed
+- Ancient Falmer Tomes, Vol. 2: The Journal of Mirtil Angoth
+- Ancient Falmer Tomes, Vol. 3: The Diary of Faire Agarwen
+- Ancient Falmer Tomes, Vol. 4: Touching the Sky
+- Ancient Tales of the Dwemer, Vol. 01: The Ransom of Zarek
+- Ancient Tales of the Dwemer, Vol. 02: The Seed
+- Ancient Tales of the Dwemer, Vol. 03: The Importance of Where
+- Ancient Tales of the Dwemer, Vol. 05: Song of the Alchemists
+- Ancient Tales of the Dwemer, Vol. 06: Chimarvamidium
+- Ancient Tales of the Dwemer, Vol. 10: The Dowry
+- Ancient Tales of the Dwemer, Vol. 11: Azura and the Box
+- Mogen's Tales, Vol. 1: The Woodcutter's Wife
+- Mogen's Tales, Vol. 2: The Cabin in the Woods
+
+A version which uses "Life of Eslaf Erol" instead, for compatibility with
+the covers provided by Book Covers Skyrim, is also available on Nexus.
+
 Like other SkyPatcher mods, these changes are processed *after* all
 `.esp`/`.esl` type mods have been loaded and processed, and *only* touches
 the actual book titles, so all other changes done to books in other mods
@@ -92,6 +118,14 @@ Licensing for the mod is kind of stupidly complicated!  So it goes.
 
 Changelog
 =========
+
+**v1.1.0** - *April 23, 2026*
+ - Added book-series categorization for four series which didn't already
+   have it in the titles, specifically:
+    - Adventures of Eslaf Erol
+    - Ancient Falmer Tomes
+    - Ancient Tales of the Dwemer
+    - Mogen's Tales
 
 **v1.0.0** - *February 2, 2026*
  - Initial version (uploaded to Nexus on Feb 4)
