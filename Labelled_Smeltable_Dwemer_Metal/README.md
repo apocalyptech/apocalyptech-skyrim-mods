@@ -19,6 +19,8 @@ the first character, a la:
     ; Not in vanilla, but fixed by USSEP
     ;filterByMiscs=Skyrim.esm|000C886A:fullName=~Dwemer Scrap Metal (Smeltable)~
 
+This mod's been uploaded to Nexus: <https://www.nexusmods.com/skyrimspecialedition/mods/178321>
+
 Installation
 ============
 
