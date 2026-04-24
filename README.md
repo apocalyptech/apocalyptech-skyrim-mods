@@ -16,13 +16,11 @@ of things that I wanted, though, and so I've stuck my toe in slightly.
   allow them to sort more usefully in inventory (all healing potions together,
   all archery potions together, etc).  Only affects vanilla-game "standard"
   potions, not player-created potions!
-- [Fix USSEP Book Bounds (SkyPatcher)](Fix_USSEP_Book_Bounds/).
-  A SkyPatcher mod to fix some object bounding issues introduced by
-  USSEP, which was causing some problems with the
-  [Unlimited Bookshelves](https://www.nexusmods.com/skyrimspecialedition/mods/2885)
-  mod.  It looks like USSEP is likely to fix those bounds in its
-  next version, so this little thing probably has a pretty short
-  shelf life.
+- [Unlimited Bookshelves Compat - Fix Book Bounds (SkyPatcher)](Unlimited_Bookshelves_Compat_Fix_Book_Bounds/)
+  (Formerly "Fix USSEP Book Bounds").  A SkyPatcher mod to fix some object
+  bounding issues on various books in the game, which otherwise cause some
+  problems with the [Unlimited Bookshelves](https://www.nexusmods.com/skyrimspecialedition/mods/2885)
+  mod.
 - [Longer Crafting Potions Without Cost Increase](Longer_Crafting_Potions_Without_Cost_Increase/).
   Increases the duration of Barter/Enchanting/Smithing potions by 20x
   (bringing most to 10 minutes) without altering their cost at all.
