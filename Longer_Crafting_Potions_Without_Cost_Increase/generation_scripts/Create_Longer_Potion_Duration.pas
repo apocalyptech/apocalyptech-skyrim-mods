@@ -61,14 +61,9 @@
 
     Honestly I'm surprised I didn't look into SkyPatcher for this right off the bat!
     Anyway, this mod only affects Smithing + Enchanting (which are really the only
-    two I actually care about anyway) but does *not* address the potion cost concern.
-    I believe that a small additional INI file in the `magicEffect` dir would take
-    care of that too, though (untested but I think it should work):
-
-      ; Fortify Smithing
-      filterByMgefs=Skyrim.esm|3EB1D:baseCost=0.027793
-      ; Fortify Enchanting
-      filterByMgefs=Skyrim.esm|3EB29:baseCost=0.022234
+    two I actually care about anyway), so for future playthroughs I may just use this.
+    As of v1.1, it includes the proper price scaling as well, so it's probably
+    functionally identical to my own version (minus the Barter effect).
 
     Updates both crafted and "found" potions.
 
