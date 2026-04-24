@@ -11,7 +11,8 @@ of things that I wanted, though, and so I've stuck my toe in slightly.
   (the/a/an) from the front of book titles to the end, so that they
   alphabetize properly in inventory and on bookshelves.
 - [Labelled Smeltable Dwemer Metal (SkyPatcher)](Labelled_Smeltable_Dwemer_Metal/).
-  Adds a "(Smeltable)" suffix to all smeltable Dwemer clutter.
+  A SkyPatcher mod which adds a "(Smeltable)" suffix to all smeltable
+  Dwemer clutter.
 - [Longer Crafting Potions Without Cost Increase](Longer_Crafting_Potions_Without_Cost_Increase/).
   Increases the duration of Barter/Enchanting/Smithing potions by 20x
   (bringing most to 10 minutes) without altering their cost at all.
