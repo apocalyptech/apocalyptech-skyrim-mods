@@ -5,11 +5,20 @@ I'm not actually intending to do much modding for Skyrim.  Just about
 anything I'd want to do basically already exists.  There were a couple
 of things that I wanted, though, and so I've stuck my toe in slightly.
 
-- [Book Sorting SSE (Skypatcher)](Book_Sorting_SSE_SkyPatcher/).  A
-  [SkyPatcher](https://www.nexusmods.com/skyrimspecialedition/mods/106659)
-  mod to, among some other normalizations, move any article prefix
+Many of these mods are
+[SkyPatcher](https://www.nexusmods.com/skyrimspecialedition/mods/106659)-based,
+which is a pretty nifty way of making really targetted edits to game
+data without having to override a whole form (which can reduce the need
+for endless "patch" compatibility mods).  There's downsides too, of course,
+but for the sorts of things I typically want to do, it's sort of ideal.
+
+- [Book Sorting SSE (SkyPatcher)](Book_Sorting_SSE_SkyPatcher/).  A
+  SkyPatcher mod to, among some other normalizations, move any article prefix
   (the/a/an) from the front of book titles to the end, so that they
   alphabetize properly in inventory and on bookshelves.
+- [Improved College of Winterhold Tome Vendors Stock (SkyPatcher)](Improved_College_of_Winterhold_Tome_Vendors_Stock/).
+  A SkyPatcher mod to ensure that the College of Winterhold vendors always
+  have the full stock of non-Master-level spell tomes available.
 - [Labelled Smeltable Dwemer Metal (SkyPatcher)](Labelled_Smeltable_Dwemer_Metal/).
   A SkyPatcher mod which adds a "(Smeltable)" suffix to all smeltable
   Dwemer clutter.
@@ -19,8 +28,7 @@ of things that I wanted, though, and so I've stuck my toe in slightly.
   Currently just the generation script!  I'm not yet providing any
   already-generated `.esp` files.
 - [Potion Sorting SSE (Skypatcher)](Potion_Sorting_SSE_SkyPatcher/).  A
-  [SkyPatcher](https://www.nexusmods.com/skyrimspecialedition/mods/106659)
-  mod to change potion names to include the actuall effect data, and
+  SkyPatcher mod to change potion names to include the actuall effect data, and
   allow them to sort more usefully in inventory (all healing potions together,
   all archery potions together, etc).  Only affects vanilla-game "standard"
   potions, not player-created potions!
