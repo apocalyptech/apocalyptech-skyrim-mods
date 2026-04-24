@@ -59,6 +59,9 @@ other mods which could use similar bounds tweaking, in lieu of updating the
 mod itself (such as for abandoned mods, etc), let me know and it should be
 easy enough to add them in here.
 
+As of v1.2.0, this mod's also been uploaded to Nexus at
+<https://www.nexusmods.com/skyrimspecialedition/mods/178309>.
+
 Installation
 ============
 
