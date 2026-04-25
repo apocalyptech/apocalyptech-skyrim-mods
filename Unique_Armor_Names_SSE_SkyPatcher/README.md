@@ -1,5 +1,5 @@
-Improved College of Winterhold Tome Vendors Stock (SkyPatcher)
-==============================================================
+Unique Armor Names SSE (SkyPatcher)
+===================================
 
 This is a [SkyPatcher](https://www.nexusmods.com/skyrimspecialedition/mods/106659)-based
 mod which adds numeric suffixes to groups of armor/clothing which otherwise
