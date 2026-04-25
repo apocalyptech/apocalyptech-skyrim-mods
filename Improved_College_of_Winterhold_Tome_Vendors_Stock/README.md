@@ -14,8 +14,10 @@ spells which are only meant to be unlocked after doing various quests,
 etc, and the *intention* of the mod was not to provide early unlocks
 for anything.  More I just didn't want to have to engage with RNG
 repeatedly to acquire all the available spells for my character, so
-I figured this would do the trick.  Anyway, c'est la vie!  I lack the
-drive to do something "smarter" in the mod, at the moment.
+I figured this would do the trick.  Also, the mod ends up giving access
+to the "Spectral Arrow" spell, which is in the game data but ordinarily
+not legitimately acquireable in the game.  Anyway, c'est la vie!  I lack
+the drive to do something "smarter" in the mod, at the moment.
 
 The mod is generated entirely by code, inside
 [xEdit/SSEEdit](https://github.com/TES5Edit/TES5Edit).
