@@ -1,4 +1,4 @@
-Book Sorting SSE (SkyPatcher) Generation Script
+Unique Armor Names SSE (SkyPatcher) Generation Script
 Copyright (C) 2026 CJ Kucera 
 
 Redistribution and use in source and binary forms, with or without
