@@ -32,6 +32,9 @@ but for the sorts of things I typically want to do, it's sort of ideal.
   allow them to sort more usefully in inventory (all healing potions together,
   all archery potions together, etc).  Only affects vanilla-game "standard"
   potions, not player-created potions!
+- [Unique Armor Names SSE (SkyPatcher)](Unique_Armor_Names_SSE_SkyPatcher/).
+  A SkyPatcher mod to add numeric suffixes to groups of armor/clothing which
+  otherwise have identical names.
 - [Unlimited Bookshelves Compat - Fix Book Bounds (SkyPatcher)](Unlimited_Bookshelves_Compat_Fix_Book_Bounds/)
   (Formerly "Fix USSEP Book Bounds").  A SkyPatcher mod to fix some object
   bounding issues on various books in the game, which otherwise cause some
