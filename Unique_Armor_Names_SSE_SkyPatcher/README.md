@@ -25,6 +25,16 @@ might be over-numbering: Boots, College Boots, Fine Boots, Fine Clothes,
 Merchant's Clothes, and Shoes.  I wouldn't be surprised if there were
 other things not exactly right, too.
 
+Note as well that the specific order of the numbering is essentially
+arbitrary.  There are various kinds of armor where there's functional
+differences between the various versions -- for instance, there's
+two "Imperial Armor of Health" items, one of which is light armor
+and which is heavy.  But which one gets "1 of 2" and which gets
+"2 of 2" is essentially random, and won't necessarily match other
+gear with the same distinctions (or rather: the one with a lower
+FormID gets the lower number).  The numbering will be deterministic,
+but not useful for gauging the relative quality of gear, etc.
+
 Installation
 ============
 
