@@ -82,6 +82,11 @@ Licensing for the mod is kind of stupidly complicated!  So it goes.
 Changelog
 =========
 
+**v1.0.1** - *April 26, 2026*
+ - Fixed up what was technically some edge-case bug behavior in the xEdit
+   data-extraction script, though the chances of it ever getting triggered
+   was rather vanishingly small.  No functional changes to the mod itself.
+
 **v1.0.0** - *April 25, 2026*
  - Initial version
 

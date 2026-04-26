@@ -1,7 +1,7 @@
 {
   vim: set expandtab tabstop=2 shiftwidth=2:
 
-  Generate SkyPatcher Armor Name Statements v1.0.0
+  Generate SkyPatcher Armor Name Statements v1.0.1
   =================================================
 
   Generates a collection of SkyPatcher statements to set the name of
@@ -70,6 +70,7 @@ var
   i, j, k: integer;
 
   mainFile: IwbFile;
+  mainFilename: string;
 
   armorGroup: IwbGroupRecord;
   armor: IwbElement;
@@ -77,8 +78,9 @@ var
 
   foundOtherRefs: boolean;
   ref: IwbMainRecord;
+  refFile: IwbFile;
   refSig: string;
-  refFormID: integer;
+  refFormID: cardinal;
   refFilename: string;
 
   fileObj: IwbFile;
@@ -157,16 +159,34 @@ begin
         if refSig = 'ARMO' then Continue;
         if refSig = 'FLST' then Continue;
 
-        // Ignore references to some generic "All X" CONT objects
-        refFormID := FixedFormID(ref);
+        // Ignore references to some generic "All X" CONT objects.  I did
+        // try looking up these objects earlier and then *just* comparing
+        // on the actual LoadOrderFormID, under the belief that it'd probably
+        // be quicker to just do a single numeric comparison than it would be
+        // to do both a string *and* numeric comparison (not to mention looking
+        // up that ESL flag to properly localize the FormID), but it turns out
+        // that there's essentially no difference in runtime.  So, whatever,
+        // we'll just do it this way!
+        refFile := GetFile(ref);
+        refFormID := FormID(ref);
+        refFilename := GetFileName(ref);
+        // I couldn't figure out a better way of isolating these
+        if (GetElementNativeValues(ElementByIndex(fileObj, 0), 'Record Header\Record Flags\ESL') = true) then
+        begin
+          refFormID := FixedFormID(ref) and $FFF;
+        end
+        else
+        begin
+          refFormID := FixedFormID(ref) and $FFFFFF;
+        end;
         // All Clothing And Jewelry
-        if refFormId = $C2CD8 then Continue;
+        if (refFilename = 'Skyrim.esm') and (refFormId = $0C2CD8) then Continue;
         // All Standard Armor
-        if refFormId = $C2CD6 then Continue;
+        if (refFilename = 'Skyrim.esm') and (refFormId = $0C2CD6) then Continue;
         // All Dawnguard Weapons and Armor
-        if refFormId = $200CAB5 then Continue;
-        // All Dragonborn Armor (shouldn't this be $4026B63 ???)
-        if refFormId = $2026B63 then Continue;
+        if (refFilename = 'Dawnguard.esm') and (refFormId = $00CAB5) then Continue;
+        // All Dragonborn Armor
+        if (refFilename = 'Dragonborn.esm') and (refFormId = $026B63) then Continue;
 
         // Omit references from Elysium Estate.  The way EE does some of its display
         // areas causes a few bits of armor to seem acquireable when they really
@@ -175,7 +195,6 @@ begin
         // If we store Auriel's Shield and then get it back, are we getting this test
         // version instead?  The other reference to look into would be Ring of
         // Hircine (0002AC60).)
-        refFilename := GetFileName(GetFile(ref));
         if refFilename = 'ElysiumEstate.esp' then Continue;
         // This mod adds some "Ragged Boots" which I don't think are acquireable
         if refFilename = 'TasteOfDeath_Addon_Boss.esp' then Continue;
