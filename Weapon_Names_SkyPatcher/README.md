@@ -70,7 +70,7 @@ License
 
 The script is licensed under the [Mozilla Public License 2.0](https://www.mozilla.org/en-US/MPL/2.0/),
 since it uses a snippet from one of the example scripts provided
-by xEdit.  ([`LICENSE-xEdit_Script-MPL2.txt`](LICENSE-xEdit_Script-MPL2.txt))
+by xEdit.  ([`LICENSE.txt`](LICENSE.txt))
 
 Changelog
 =========
