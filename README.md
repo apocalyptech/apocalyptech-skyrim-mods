@@ -41,5 +41,12 @@ but for the sorts of things I typically want to do, it's sort of ideal.
   problems with the [Unlimited Bookshelves](https://www.nexusmods.com/skyrimspecialedition/mods/2885)
   mod.
 
+And one directory which is not really a mod, but is at least modding-adjacent:
+
+- [Weapon Name Statements (SkyPatcher)](Weapon_Names_SkyPatcher/).  This is
+  an xEdit/SSEEdit script to generate SkyPatcher statements to set the names
+  of all weapons found in the game.  I just use it to keep track of gear
+  which is in my in-game "collection" during a playthrough.
+
 That's it!
 
