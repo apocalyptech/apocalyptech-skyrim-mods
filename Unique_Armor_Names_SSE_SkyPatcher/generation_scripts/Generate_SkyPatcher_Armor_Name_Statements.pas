@@ -35,7 +35,7 @@
   use in your game.  
 
   The script can be run "against" any target you want in xEdit;
-  it loops through all loaded files and investigates all BOOK forms
+  it loops through all loaded files and investigates all ARMO forms
   to construct the statements, rather than operating against the
   selected forms/group-of-forms.  So you'd be best off running
   against a single form instead of a group of forms, so that
