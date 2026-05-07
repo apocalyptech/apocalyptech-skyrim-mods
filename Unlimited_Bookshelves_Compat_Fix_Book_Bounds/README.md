@@ -27,10 +27,10 @@ Unlimited Bookshelves!
 
 Base-game books fixed up by this mod:
 
-- The Book of Daedra (`Book2CommonBookofDaedra`, fixed in USSEP v4.3.7, but broken as of [Book Covers Skyrim 4.2](https://www.nexusmods.com/skyrimspecialedition/mods/50615?tab=posts&comment_id=166735315))
-- The Real Barenziah, Vol. 2 (`Book2CommonRealBarenziahV2`, fixed in USSEP v4.3.7, but broken as of [Book Covers Skyrim 4.2](https://www.nexusmods.com/skyrimspecialedition/mods/50615?tab=posts&comment_id=166735315))
-- The Wolf Queen, Vol. 4 (`Book0WolfQueenV4`, fixed in USSEP v4.3.7, but broken as of [Book Covers Skyrim 4.2](https://www.nexusmods.com/skyrimspecialedition/mods/50615?tab=posts&comment_id=166735315))
-- Immortal Blood (`Book0ImmortalBlood`, fixed in USSEP v4.3.7, but broken as of [Book Covers Skyrim 4.2](https://www.nexusmods.com/skyrimspecialedition/mods/50615?tab=posts&comment_id=166735315))
+- The Book of Daedra (`Book2CommonBookofDaedra`, fixed in USSEP v4.3.7, but broken as of [Book Covers Skyrim v4.2 / USSEP Update v1.2](https://www.nexusmods.com/skyrimspecialedition/mods/50615?tab=posts&comment_id=166735315))
+- The Real Barenziah, Vol. 2 (`Book2CommonRealBarenziahV2`, fixed in USSEP v4.3.7, but broken as of [Book Covers Skyrim v4.2 / USSEP Update v1.2](https://www.nexusmods.com/skyrimspecialedition/mods/50615?tab=posts&comment_id=166735315))
+- The Wolf Queen, Vol. 4 (`Book0WolfQueenV4`, fixed in USSEP v4.3.7, but broken as of [Book Covers Skyrim v4.2 / USSEP Update v1.2](https://www.nexusmods.com/skyrimspecialedition/mods/50615?tab=posts&comment_id=166735315))
+- Immortal Blood (`Book0ImmortalBlood`, fixed in USSEP v4.3.7, but broken as of [Book Covers Skyrim v4.2 / USSEP Update v1.2](https://www.nexusmods.com/skyrimspecialedition/mods/50615?tab=posts&comment_id=166735315))
 - Totems of Hircine (`CR12TotemsOfHircineAbbr`, fixed in USSEP v4.3.7)
 - Tamrielic Lore: Revised (`Book3ValuableTamrielicLoreRevised`, reported to [USSEP](https://afktrack.afkmods.com/index.php?a=issues&i=36398) and likely to be fixed in v4.3.9)
 - Three Thieves (`SkillSneak1`, reported to [Book Covers Skyrim](https://www.nexusmods.com/skyrimspecialedition/mods/901?tab=posts&comment_id=166774753))
