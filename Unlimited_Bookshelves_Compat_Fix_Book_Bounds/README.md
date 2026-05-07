@@ -27,30 +27,30 @@ Unlimited Bookshelves!
 
 Base-game books fixed up by this mod:
 
-- The Book of Daedra (`Book2CommonBookofDaedra`)
-- The Real Barenziah, Vol. 2 (`Book2CommonRealBarenziahV2`)
-- The Wolf Queen, Vol. 4 (`Book0WolfQueenV4`)
-- Immortal Blood (`Book0ImmortalBlood`)
-- Totems of Hircine (`CR12TotemsOfHircineAbbr`)
-- Tamrielic Lore: Revised (`Book3ValuableTamrielicLoreRevised`)
-- Three Thieves (`SkillSneak1`)
+- The Book of Daedra (`Book2CommonBookofDaedra`, fixed in USSEP v4.3.7, but broken as of [Book Covers Skyrim 4.2](https://www.nexusmods.com/skyrimspecialedition/mods/50615?tab=posts&comment_id=166735315))
+- The Real Barenziah, Vol. 2 (`Book2CommonRealBarenziahV2`, fixed in USSEP v4.3.7, but broken as of [Book Covers Skyrim 4.2](https://www.nexusmods.com/skyrimspecialedition/mods/50615?tab=posts&comment_id=166735315))
+- The Wolf Queen, Vol. 4 (`Book0WolfQueenV4`, fixed in USSEP v4.3.7, but broken as of [Book Covers Skyrim 4.2](https://www.nexusmods.com/skyrimspecialedition/mods/50615?tab=posts&comment_id=166735315))
+- Immortal Blood (`Book0ImmortalBlood`, fixed in USSEP v4.3.7, but broken as of [Book Covers Skyrim 4.2](https://www.nexusmods.com/skyrimspecialedition/mods/50615?tab=posts&comment_id=166735315))
+- Totems of Hircine (`CR12TotemsOfHircineAbbr`, fixed in USSEP v4.3.7)
+- Tamrielic Lore: Revised (`Book3ValuableTamrielicLoreRevised`, reported to [USSEP](https://afktrack.afkmods.com/index.php?a=issues&i=36398) and likely to be fixed in v4.3.9)
+- Three Thieves (`SkillSneak1`, reported to [Book Covers Skyrim](https://www.nexusmods.com/skyrimspecialedition/mods/901?tab=posts&comment_id=166774753))
 
 Saints & Seducers Creation Club books fixed up by this mod:
 
-- Heretical Thoughts (`ccBGSSSE025_HereticalThoughts_Book02`)
-- Spell Tome: Conjure Golden Saint Archer (`ccBGSSSE025_SpellTomeConjureGoldenSaintArcher`)
-- Spell Tome: Conjure Golden Saint Warrior (`ccBGSSSE025_SpellTomeConjureGoldenSaintWarrior`)
-- Spell Tome: Conjure Dark Seducer Archer (`ccBGSSSE025_SpellTomeConjureDarkSeducerArcher`)
-- Spell Tome: Conjure Dark Seducer Warrior (`ccBGSSSE025_SpellTomeConjureDarkSeducerWarrior`)
-- Spell Tome: Conjure Staada (`ccBGSSSE025_SpellTomeConjureStaada`)
+- Heretical Thoughts (`ccBGSSSE025_HereticalThoughts_Book02`, fixed in USSEP v4.3.8)
+- Spell Tome: Conjure Golden Saint Archer (`ccBGSSSE025_SpellTomeConjureGoldenSaintArcher`, fixed in USSEP v4.3.8)
+- Spell Tome: Conjure Golden Saint Warrior (`ccBGSSSE025_SpellTomeConjureGoldenSaintWarrior`, fixed in USSEP v4.3.8)
+- Spell Tome: Conjure Dark Seducer Archer (`ccBGSSSE025_SpellTomeConjureDarkSeducerArcher`, fixed in USSEP v4.3.8)
+- Spell Tome: Conjure Dark Seducer Warrior (`ccBGSSSE025_SpellTomeConjureDarkSeducerWarrior`, fixed in USSEP v4.3.8)
+- Spell Tome: Conjure Staada (`ccBGSSSE025_SpellTomeConjureStaada`, fixed in USSEP v4.3.8)
 
 Dawnguard books fixed up by this mod:
 
-- Spell Tome: Heal Undead (`DLC1SpellTomeHealUndead`)
+- Spell Tome: Heal Undead (`DLC1SpellTomeHealUndead`, reported to [USSEP](https://afktrack.afkmods.com/index.php?a=issues&i=36495) and likely to be fixed in v4.3.9)
 
 Books from other mods:
-- Spell Tome: Summon Lenora (`DZ05_SpellTomeSummonLenora` - from [Lenora - CVR Custom Voiced Merchant Follower](https://www.nexusmods.com/skyrimspecialedition/mods/104446))
-- Spell Tome: I Need A Merchant (`DZ06_SummonAronelSpellTome` - from [Aronel - CVR Custom Voiced Follower And Merchant](https://www.nexusmods.com/skyrimspecialedition/mods/106001))
+- Spell Tome: Summon Lenora (`DZ05_SpellTomeSummonLenora` - from [Lenora - CVR Custom Voiced Merchant Follower](https://www.nexusmods.com/skyrimspecialedition/mods/104446), fixed in v1.1.2)
+- Spell Tome: I Need A Merchant (`DZ06_SummonAronelSpellTome` - from [Aronel - CVR Custom Voiced Follower And Merchant](https://www.nexusmods.com/skyrimspecialedition/mods/106001), fixed in v1.1.1)
 
 One of the nice things about SkyPatcher-based mods is that none of those
 are actual dependencies.  Any commands referencing mod content that's not
